@@ -1,0 +1,24 @@
+[project]
+name = "tablet-inspection-console"
+version = "2.0.0"
+description = "Educational synthetic tablet defect detection and counting console"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+# The modules live at the project root, so put it on sys.path. Without this,
+# `pytest` only works when invoked as `python -m pytest` from this exact
+# directory, and fails in CI and in IDE test runners.
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = [
+    "model: needs the trained model in artifacts/ (skipped when absent)",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501", "E741"]

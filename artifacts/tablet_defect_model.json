@@ -1,0 +1,34 @@
+{
+  "task": "Educational synthetic tablet defect classification",
+  "labels": {
+    "0": "Normal Tablet",
+    "1": "Defective Tablet"
+  },
+  "defect_types": [
+    "none",
+    "crack",
+    "color anomaly",
+    "chip",
+    "surface spots"
+  ],
+  "model": "Gradient Boosting",
+  "samples": 6000,
+  "detector_sourced_share": 0.5,
+  "features": 3124,
+  "test_accuracy_binary": 0.9833,
+  "test_accuracy_defect_type": 0.9709,
+  "recall_per_class": {
+    "none": 0.9967,
+    "crack": 0.9054,
+    "color anomaly": 0.9932,
+    "chip": 0.92,
+    "surface spots": 0.9589
+  },
+  "missed_as_normal": {
+    "crack": 0.0338,
+    "color anomaly": 0.0,
+    "chip": 0.08,
+    "surface spots": 0.0068
+  },
+  "warning": "Not suitable for pharmaceutical QA or regulatory deployment."
+}

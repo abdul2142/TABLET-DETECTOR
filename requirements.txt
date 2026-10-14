@@ -1,0 +1,13 @@
+# Pillow 10.1 is the floor: ImageFont.load_default(size=...) is used when
+# drawing blister-pack text and only gained its `size` argument in 10.1.
+Pillow>=10.1,<13
+# Gradio 6 is the floor: the console uses gr.Textbox(buttons=[...]) and passes
+# theme/css to launch(), neither of which exists in Gradio 4 or 5.
+gradio>=6.0,<7
+# Streamlit front-end (streamlit_app.py). Both consoles share one inspection
+# pipeline, so both UI frameworks are declared here.
+streamlit>=1.36,<2
+numpy>=1.26,<3
+scikit-learn>=1.4,<2
+scipy>=1.10,<2
+joblib>=1.3,<2

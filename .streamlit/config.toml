@@ -1,0 +1,21 @@
+# The shared stylesheet in ui.py is written for a light surface, and
+# streamlit_app.py supplies light values for Gradio's theme variables, so pin
+# the base theme to match rather than letting the OS preference flip it.
+[theme]
+base = "light"
+primaryColor = "#2563eb"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F1F5F9"
+textColor = "#0F172A"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+# Uploads are downscaled to TIC_MAX_EDGE before inspection; cap what is
+# accepted in the first place.
+maxUploadSize = 25

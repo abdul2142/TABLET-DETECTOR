@@ -1,0 +1,24 @@
+# Keep the image small and reproducible.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Tests are not needed at runtime.
+tests/
+
+# Training previews are development output; the model and example photos stay.
+artifacts/previews/
+
+.git/
+.gitignore
+.github/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.md
+!README.md
